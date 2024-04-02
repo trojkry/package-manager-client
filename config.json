@@ -1,0 +1,12 @@
+{
+    "servers": [
+        {
+            "name": "Local Host",
+            "url": "http://127.0.0.1"
+        },
+        {
+            "name": "Forpsi - Debian",
+            "url": "http://81.2.233.94"
+        }
+    ]
+}
