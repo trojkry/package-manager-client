@@ -3,30 +3,32 @@ import json
 
 port = settings.PORT
 
+# Načte config
 def load_config(filename="config.json"):
     with open(filename, "r") as file:
         config = json.load(file)
     return config
 
+# Načte config pro zápis
 def save_config(config, filename="config.json"):
     with open(filename, "w") as file:
         json.dump(config, file, indent=4)
-
+# Přidá server do configu
 def add_server(name, url):
     new_server = {"name": name, "url": url}
     config["servers"].append(new_server)
     save_config(config)
-
+# Vypíš servery v configu
 def list_servers():
     for index, server in enumerate(config["servers"], start=1):
         print(f"{index}. {server['name']} - {server['url']}")
-
+# Ukáže hlavní menu
 def show_menu():
     print("Vyberte možnost:")
     print("1. Přidat nový server")
     print("2. Zvolit existující server")
     print("3. Ukončit program")
-
+# Ukáže nabídku s operacemi
 def show_menu_operations():
     print("Vyberte možnost:")
     print(selected_server["url"])

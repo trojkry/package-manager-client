@@ -1,8 +1,4 @@
 import requests
-import json
-
-url = "http://81.2.233.94"
-
 
 def install_packages(url, port):
     packages = input("Zadejte balíčky oddělené čárkami: ")
